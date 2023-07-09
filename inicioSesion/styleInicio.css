@@ -1,0 +1,15 @@
+
+  h2,h1,p {
+    text-align: left;
+    margin-left: 3%;
+  }
+
+  form {
+    padding: 20px;
+    text-align: left;
+    margin-top: 5px;
+    border-color: bisque;
+    margin-left: 10%;
+  }
+
+  
