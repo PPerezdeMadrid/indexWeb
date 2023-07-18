@@ -1,5 +1,5 @@
 <?php
-$carpeta_destino = '../datos/';  // Ruta a la carpeta destino
+$carpeta_destino = 'datos/';  // Ruta a la carpeta destino
 
 if (!empty($_FILES['archivo']['name'])) {                                           //verifica si el archivo ha sido seleccionado
   $archivo_destino = $carpeta_destino . basename($_FILES['archivo']['name']);       //lo mueve

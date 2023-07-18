@@ -7,3 +7,6 @@ Tabla: usuarios
     - password
 
 Usuario de ejemplo: paloma_pml, Paloma1234+
+
+index.html--> cd /var/www/html
+para ver el archivo HTML: xdg-open index.html
