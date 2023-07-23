@@ -1,0 +1,39 @@
+Instalación de APACHE: https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-es
+	> Parar servidor: sudo systemctl stop apache2
+	> Iniciar servidor: sudo systemctl start apache2
+	> Configuración de mi dominio
+		- sudo mkdir /var/www/your_domain
+		- sudo chown -R $USER:$USER /var/www/your_domain
+		- sudo chmod -R 755 /var/www/your_domain
+		- sudo nano /var/www/your_domain/index.html
+	> Crear archivo de host virtual
+		- sudo nano /etc/apache2/sites-available/your_domain.conf
+				<VirtualHost *:80>
+    					ServerAdmin webmaster@localhost
+    					ServerName your_domain
+    					ServerAlias www.your_domain
+   					DocumentRoot /var/www/your_domain
+    					ErrorLog ${APACHE_LOG_DIR}/error.log
+   					CustomLog ${APACHE_LOG_DIR}/access.log combined
+				</VirtualHost>
+				
+		- DocumentRoot por nuestro nuevo directorio
+		- ServerAdmin por un correo electrónico al que pueda acceder el administrador del sitio your_domain. 
+	> Habilitar archivo: sudo a2ensite your_domain.conf
+	> Deshabilitar predefinido: sudo a2dissite 000-default.conf
+	> Prueba para comprobar que no hay errores: sudo apache2ctl configtest
+	
+	
+Instalación de PHP: https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04-es#paso-3-instalar-php
+	> sudo apt install php libapache2-mod-php php-mysql	
+	> vim /var/www/your_domain/info.php
+		- Añadir: <?php
+			phpinfo();
+		
+		
+		
+		
+		
+		
+		
+		
