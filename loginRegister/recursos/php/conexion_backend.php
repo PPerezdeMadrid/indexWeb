@@ -3,7 +3,7 @@
 $host = "localhost";
 $database = "servidorPPM";
 $username = "paloma_pml"; 
-$password = "Paloma1234+"; // Reemplaza esto con la contraseña de tu base de datos
+$password = "Paloma1234+"; 
 
 // Conexión a la base de datos usando PDO (PHP Data Objects)
 try {
