@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang ="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Servidor PPM</title>
+        <link rel="stylesheet" href="recursos/css/estilos.css">
+    </head>
+
+    <body>
+        <main>
+            <div class="contenedor__todo">
+
+                <!--Caja trasera -->
+                <div class="caja_trasera">
+                    <div class="caja_trasera__subir">
+                        <h3> ¿Quieres subir un archivo?</h3>
+                        <p> Accede al servidor para subir tus archivos más importantes </p>
+                        <button id="btn__subir"> Subir Archivos </button>
+                    </div>
+
+                    <div class="caja_trasera__descargar">
+                        <h3> ¿Quieres descargarte un archivo?</h3>
+                        <p> Accede al servidor para descargar tus archivos</p>
+                        <button id="btn__descargar"> Descargar </button>
+                    </div>
+                </div>
+
+                <!--Formulario de Subir y Descargar -->
+                <div class="contenedor__subir-descargar">
+                    <!--SUBIR -->
+                    <form action="recursos/php/subir_archivos.php" class="formulario_subir" method="GET" enctype="multipart/form-data"> <!--Va a permitir binarios-->
+                        <h2> Selecciona un archivo</h2>
+                        <input type = "file" placeholder = "seleccione archivo" name="file" id="file">
+                        <button> Subir </button>
+                    </form>
+
+
+                    <!--REGISTER-->
+                    <form action="POST" class="formulario_descargar">
+                        <h2> Descargar</h2>
+                        <input type="text" placeholder="Nombre">
+                        <input type = "text" placeholder="Apellidos">
+                        <input type="text" placeholder="Usuario">
+                        <input type="password" placeholder="Contraseña">
+                        <button> Descargar </button>
+                    </form>
+                </div>
+
+            </div>
+        </main>
+        <script src="recursos/js/script.js"></script>
+    </body>
+</html>
